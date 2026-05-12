@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --color-abyss: #001D39;
+  --color-indigo: #0A4174;
+  --color-muted: #49769F;
+  --color-teal: #4E8EA2;
+  --color-sky: #7BBDE8;
+  --color-ice: #BDD8E9;
+}
+
+@theme inline {
+  --color-abyss: var(--color-abyss);
+  --color-indigo: var(--color-indigo);
+  --color-muted: var(--color-muted);
+  --color-teal: var(--color-teal);
+  --color-sky: var(--color-sky);
+  --color-ice: var(--color-ice);
+  
+  --font-playfair: var(--font-playfair);
+  --font-dm-sans: var(--font-dm-sans);
+  --font-montserrat: var(--font-montserrat);
+  --font-hindi: var(--font-hindi);
+
+  --animate-float: float 6s ease-in-out infinite;
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+.editorial-subheader {
+  @apply font-montserrat text-[10px] md:text-[11px] tracking-[0.6em] uppercase font-light text-abyss/60;
+}
+
+body {
+  @apply bg-white text-abyss selection:bg-sky selection:text-white;
+  scroll-behavior: smooth;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo to-sky;
+}
+
+.glass {
+  @apply backdrop-blur-md bg-white/10 border border-white/20;
+}
+
+.glass-dark {
+  @apply backdrop-blur-md bg-black/40 border border-white/10;
+}
