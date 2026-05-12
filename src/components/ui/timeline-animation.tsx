@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 
 interface TimelineContentProps {
   children: React.ReactNode;
-  timelineRef: React.RefObject<HTMLElement>;
+  timelineRef: React.RefObject<any>;
   animationNum?: number;
   customVariants?: any;
   className?: string;
